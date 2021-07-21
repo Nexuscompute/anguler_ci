@@ -1,0 +1,15 @@
+
+.nav-link{
+font-size: 22px;
+font-family: fantasy;
+
+}
+.link{
+    position: relative;
+    text-align: right;
+    margin-right: -85px;
+    margin: 0px 5% 0px 22%;
+}
+.header{
+    background-color: rgb(7 239 239 / 95%);
+}

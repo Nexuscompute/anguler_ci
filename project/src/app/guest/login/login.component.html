@@ -1,0 +1,72 @@
+<div class="=container">
+
+
+    <ng-template #content let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title"  id="modal-basic-title">             
+            </h4>
+            <button type="button" class="close"
+                    aria-label="Close" (click)="modal.dismiss('Cross click')">
+             <span aria-hidden="true">× </span></button>
+            </div>
+            <form #myform="ngForm" >
+        <div class="modal-body">
+           
+                <div class="form-group">
+                    <label for="dateOfBirth"> Create Folder Name </label>
+                    <div class="input-group">
+                      
+<input type="text" name="name_folder" [(ngModel)]="name_folder" class="form-control" placeholder="Enter Folder Name"/>
+                        
+                    </div>
+                   
+                </div>
+                <button type="button"  (click)="getfolder(myform.value)" class="btn btn-primary">Submit</button>
+           
+        </div>
+    </form>
+        <div class="modal-footer">
+            <button type="button" 
+                class="btn btn-outline-dark" 
+                (click)="modal.close('Save click')">
+                Close
+            </button>
+        </div>
+    </ng-template>
+
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-5">
+
+            <table class="table table-bordered" style="width:100%;">
+                <thead>
+                  <tr>
+                    <th>Folder Name</th>
+                     <th>Delete</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of allUser">
+                    <td>{{user.name_folder}}</td>
+                    
+                    <td>
+                    <button (click)="deleteUser(user)" class="btn btn-danger">Delete</button></td>
+                  </tr>
+                  </tbody>
+              </table>
+
+
+
+</div>
+<div class="col-3">
+<button class="btn btn-lg btn-outline-primary" 
+    (click)="open(content)">
+Create Directory 
+</button>
+
+</div>
+<div class="col-2"></div>
+</div>
+</div>

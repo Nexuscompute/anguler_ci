@@ -1,0 +1,14 @@
+{
+    "/api": {
+      "target": "http://localhost/restapi/api",
+      "secure": false,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
+
+
+
+  
